@@ -4,8 +4,9 @@ LWIPDIR = src
 LWIPARCH = reip
 NEWLIBDIR = newlib
 HTTPDDIR = httpd_raw
-CC = /home/paul/Downloads/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
-LD = /home/paul/Downloads/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
+INSTALL_DIR = /opt/riscv64-unknown-elf-gcc-8.3.0-2019.08.0-x86_64-linux-centos6
+CC = $(INSTALL_DIR)/bin/riscv64-unknown-elf-gcc
+LD = $(INSTALL_DIR)/bin/riscv64-unknown-elf-gcc
 AS = $(CC)
 CFLAGS = -mcmodel=medany -mno-relax  -c
 #CFLAGS = -c -m64 -nostdlib -nostartfiles -nodefaultlibs -fomit-frame-pointer -mno-red-zone
